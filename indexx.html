@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portofolio Rio Felix Wicaksono</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General body and heading font */
+        body, h1, h2, h3, h4, h5, h6 { font-family: "Raleway", sans-serif }
+
+        /* Custom styles for the footer */
+        .my-footer-section {
+            background-color: #333; /* Dark background */
+            color: #f1f1f1; /* Light text color */
+            padding: 32px 16px; /* Padding top/bottom and sides */
+            text-align: center;
+        }
+        .my-footer-section h3 {
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .my-footer-section p {
+            margin-bottom: 8px;
+        }
+
+        /* Styling for the container of social and quick links */
+        .footer-content-flex {
+            display: flex;
+            flex-direction: column; /* Stack vertically by default on small screens */
+            align-items: center; /* Center items horizontally */
+            gap: 30px; /* Space between sections */
+            margin-top: 20px;
+        }
+        /* Media query for medium screens and up (md equivalent) */
+        @media (min-width: 768px) {
+            .footer-content-flex {
+                flex-direction: row; /* Arrange horizontally */
+                justify-content: space-around; /* Distribute space evenly */
+                align-items: flex-start; /* Align items to the top */
+            }
+        }
+
+        /* Styling for quick links list */
+        .my-footer-section .footer-links ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+        .my-footer-section .footer-links a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 8px 0; /* Adjust padding for vertical list */
+            display: block; /* Make links block level for stacking */
+        }
+        .my-footer-section .footer-links a:hover {
+            color: #009688; /* w3-teal color */
+        }
+
+        /* Styling for social media icons */
+        .my-footer-section .footer-socials a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 0 10px;
+            font-size: 24px;
+            display: inline-block; /* Ensure spacing works */
+        }
+        .my-footer-section .footer-socials a:hover {
+            opacity: 0.7;
+        }
+
+        /* Active menu item styling */
+        .w3-bar-item.active-menu {
+            color: #009688 !important; /* w3-text-teal color */
+            font-weight: bold;
+            background-color: #f0f0f0; /* Light background for active state */
+            border-left: 5px solid #009688; /* Highlight border */
+            padding-left: 11px !important; /* Adjust padding due to border */
+        }
+        /* Ensure hover still works on active menu item */
+        .w3-bar-item.active-menu:hover {
+            background-color: #e0e0e0; /* Slightly darker on hover */
+        }
+
+
+        /* Styling for skill section (no progress bars) */
+        .skill-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-list li {
+            background-color: #f1f1f1;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .skill-list li i {
+            margin-right: 10px;
+            color: #009688; /* Teal color for icons */
+        }
+        .skill-list li span {
+            font-weight: 500;
+            color: #333;
+        }
+    </style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="https://imgur.com/fKhb0Wh.jpg" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>Rio Felix Wicaksono</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#portfolio" class="w3-bar-item w3-button w3-padding sidebar-nav-link" data-section="portfolio"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PROJECT</a> 
+    <a href="#about" class="w3-bar-item w3-button w3-padding sidebar-nav-link" data-section="about"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#contact" class="w3-bar-item w3-button w3-padding sidebar-nav-link" data-section="contact"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <a href="https://www.facebook.com/rio.felix.286999" target="_blank" rel="noopener noreferrer" class="w3-hover-opacity">
+      <i class="fa fa-facebook-official"></i>
+    </a>
+    <a href="https://www.instagram.com/feliixr.w/" target="_blank" rel="noopener noreferrer" class="w3-hover-opacity">
+      <i class="fa fa-instagram"></i>
+    </a>
+    <a href="https://github.com/RioFelix" target="_blank" rel="noopener noreferrer" class="w3-hover-opacity">
+      <i class="fa fa-github"></i>
+    </a>
+  </div>
+</nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:300px">
+
+  <header id="portfolio">
+    <a href="#"><img src="https://imgur.com/fKhb0Wh.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+      <h1><b>My Project</b></h1>
+    </div>
+  </header>
+  
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://imgur.com/jPTnGrx.jpg" alt="Toko Sablon" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Toko Sablon</b></p>
+        <p>Aplikasi Web ini menampilkan layanan yang ditawarkan, galeri contoh hasil sablon dan formulir kontak agar pelanggan dapat dengan mudah menghubungi.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://imgur.com/JyqMJUV.jpg" alt="Kalkulator Sederhana" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Kalkulator Sederhana</b></p>
+        <p>Aplikasi ini akan menampilkan kalkulator dengan tombol angka, operator dasar, tombol desimal, dan tombol hapus, semuanya dalam tata letak grid yang responsif.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="https://imgur.com/y0NlorA.jpg" alt="Perpustakaan Mini" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Perpustakaan Mini</b></p>
+        <p>Aplikasi untuk mengelola daftar buku, menambahkan buku baru, mengedit, menghapus, dan mencari buku.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-padding-16" id="about">
+    <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+      <h4><b>About Me</b></h4>
+      <p>Saya adalah mahasiswa aktif Program Studi Sistem Informasi yang memiliki minat dalam pengembangan aplikasi berbasis web dan manajemen data. Saya terbiasa menggunakan berbagai tools dan bahasa pemrograman seperti HTML, CSS, PHP, dan MySQL dalam proyek-proyek sederhana. Selain itu, saya juga tertarik pada analisis sistem dan bagaimana teknologi informasi dapat diterapkan untuk memecahkan masalah bisnis. Saya senang belajar hal-hal baru dan terbuka untuk peluang kerja praktik, magang, atau kolaborasi proyek IT.</p>
+      <hr>
+      
+      <h4>Technical Skills</h4>
+      <div class="skill-list">
+        <ul>
+          <li><i class="fa fa-code"></i><span>Dasar-dasar Pemrograman (HTML, CSS, PHP, MySQL)</span></li>
+          <li><i class="fa fa-cogs"></i><span>Analisis & Perancangan Sistem</span></li>
+          <li><i class="fa fa-bar-chart"></i><span>Business Intelligence & Data Analysis</span></li>
+          <li><i class="fa fa-database"></i><span>Manajemen Database (MySQL)</span></li>
+          <li><i class="fa fa-globe"></i><span>Pengembangan Aplikasi Web</span></li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+  </div>
+  
+  <div class="w3-container w3-padding-large w3-grey" id="contact"> <h4><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey w3-padding-24">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>23083000051@student.unmer.ac.id</p>
+      </div>
+      <div class="w3-third w3-teal w3-padding-24">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>Malang, Indonesia</p>
+      </div>
+      <div class="w3-third w3-dark-grey w3-padding-24">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>0881026084026</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
+  <footer class="my-footer-section">
+    <h3>Terima Kasih Sudah Berkunjung!</h3>
+    <p>&copy; <span id="current-year-footer"></span> Portofolio Saya. Semua hak dilindungi.</p>
+    
+    <div class="footer-content-flex">
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/rio.felix.286999" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://www.instagram.com/feliixr.w/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+            <a href="https://github.com/RioFelix" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+        </div>
+
+    </div>
+  </footer>
+
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Script to dynamically set the current year in the footer's copyright notice
+document.getElementById('current-year-footer').textContent = new Date().getFullYear();
+
+
+// --- JavaScript for Active Menu Highlight ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all main content sections that correspond to navigation links
+    // Ensure these IDs match the hrefs in your sidebar links
+    const sections = document.querySelectorAll('div.w3-main > header#portfolio, div.w3-main > div[id="about"], div.w3-main > div[id="contact"]');
+    // Select all sidebar navigation links
+    const navLinks = document.querySelectorAll('#mySidebar .sidebar-nav-link');
+
+    // Function to remove active class from all nav links
+    function removeActiveClass() {
+        navLinks.forEach(link => {
+            link.classList.remove('active-menu');
+        });
+    }
+
+    // Function to highlight the active menu item based on scroll position
+    function highlightActiveMenuItem() {
+        let currentActiveSectionId = '';
+        const offset = 150; // Adjust this offset as needed for better highlight timing
+
+        // Iterate through sections to find which one is currently in view
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const sectionHeight = section.clientHeight;
+
+            // If the section is within the viewport (considering the offset)
+            if (sectionTop <= offset && sectionTop + sectionHeight > offset) {
+                currentActiveSectionId = section.id;
+            }
+        });
+
+        // Handle cases where no specific section is highlighted (e.g., at the very top)
+        // Default to 'portfolio' if at the top of the page
+        if (!currentActiveSectionId && window.scrollY < sections[0].offsetTop + 100) {
+             currentActiveSectionId = 'portfolio';
+        }
+
+        // Apply active class to the corresponding navigation link
+        removeActiveClass(); // First, remove all active classes
+        navLinks.forEach(link => {
+            if (link.dataset.section === currentActiveSectionId) {
+                link.classList.add('active-menu');
+            }
+        });
+    }
+
+    // Add click event listeners to sidebar navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor link behavior
+
+            const targetSectionId = event.currentTarget.dataset.section;
+            const targetSection = document.getElementById(targetSectionId);
+
+            if (targetSection) {
+                // Smooth scroll to the target section
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70, // Adjust for fixed header/offset if any
+                    behavior: 'smooth'
+                });
+
+                // Immediately update active class on click
+                removeActiveClass();
+                event.currentTarget.classList.add('active-menu');
+            }
+            w3_close(); // Close sidebar after clicking a link
+        });
+    });
+
+    // Attach the highlight function to scroll event
+    window.addEventListener('scroll', highlightActiveMenuItem);
+
+    // Call it once on load to set the initial active state
+    highlightActiveMenuItem();
+});
+</script>
+
+</body>
+</html>
