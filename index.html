@@ -11,19 +11,35 @@
         /* General body and heading font */
         body, h1, h2, h3, h4, h5, h6 { font-family: "Raleway", sans-serif }
 
+        /* General Body Background and Text Color */
+        body {
+            background-color: #F9FAFB; /* Background: Putih abu lembut */
+            color: #111827; /* Text Utama: Hitam kebiruan */
+        }
+
+        /* Adjust W3.CSS overrides for the original light theme */
+        .w3-light-grey { background-color: #F9FAFB !important; } /* Background: Putih abu lembut */
+        .w3-grey { background-color: #D1D5DB !important; } /* Abu-abu terang untuk latar belakang */
+        .w3-dark-grey { background-color: #4B5563 !important; } /* Abu-abu gelap untuk elemen seperti kotak kontak */
+        .w3-black { background-color: #1E3A8A !important; } /* Primary (Dark): Biru navy untuk elemen hitam */
+        .w3-teal { background-color: #3B82F6 !important; } /* Secondary: Biru terang untuk elemen teal */
+        .w3-text-teal { color: #3B82F6 !important; } /* Secondary: Biru terang untuk teks teal */
+        .w3-white { background-color: #ffffff !important; } /* Pastikan putih tetap putih */
+
         /* Custom styles for the footer */
         .my-footer-section {
-            background-color: #333; /* Dark background */
-            color: #f1f1f1; /* Light text color */
-            padding: 32px 16px; /* Padding top/bottom and sides */
+            background-color: #1E3A8A; /* Primary (Dark): Biru navy */
+            color: #F9FAFB; /* Background: Putih abu lembut */
+            padding: 32px 16px;
             text-align: center;
         }
         .my-footer-section h3 {
-            color: #fff;
+            color: #ffffff; /* Putih murni untuk judul */
             margin-bottom: 16px;
         }
         .my-footer-section p {
             margin-bottom: 8px;
+            color: #E2E8F0; /* Sedikit lebih terang dari main text untuk copyright */
         }
 
         /* Styling for the container of social and quick links */
@@ -50,38 +66,49 @@
             margin: 0;
         }
         .my-footer-section .footer-links a {
-            color: #f1f1f1;
+            color: #E2E8F0; /* Sedikit lebih terang dari main text */
             text-decoration: none;
-            padding: 8px 0; /* Adjust padding for vertical list */
-            display: block; /* Make links block level for stacking */
+            padding: 8px 0;
+            display: block;
+            transition: color 0.3s ease; /* Smooth transition for color */
         }
         .my-footer-section .footer-links a:hover {
-            color: #009688; /* w3-teal color */
+            color: #3B82F6; /* Secondary: Biru terang on hover */
         }
 
         /* Styling for social media icons */
         .my-footer-section .footer-socials a {
-            color: #f1f1f1;
+            color: #3B82F6; /* Secondary: Biru terang */
             text-decoration: none;
             padding: 0 10px;
             font-size: 24px;
-            display: inline-block; /* Ensure spacing works */
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform */
         }
         .my-footer-section .footer-socials a:hover {
-            opacity: 0.7;
+            color: #FACC15; /* Accent: Kuning cerah on hover */
+            transform: scale(1.2); /* Slightly enlarge on hover */
         }
 
         /* Active menu item styling */
+        .w3-bar-item {
+            transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease; /* Smooth transition for all changes */
+        }
         .w3-bar-item.active-menu {
-            color: #009688 !important; /* w3-text-teal color */
+            color: #1E3A8A !important; /* Primary (Dark) for active text */
             font-weight: bold;
-            background-color: #f0f0f0; /* Light background for active state */
-            border-left: 5px solid #009688; /* Highlight border */
-            padding-left: 11px !important; /* Adjust padding due to border */
+            background-color: #F9FAFB; /* Background: Putih abu lembut for active state */
+            border-left: 5px solid #3B82F6; /* Secondary: Biru terang highlight border */
+            padding-left: 11px !important;
         }
         /* Ensure hover still works on active menu item */
         .w3-bar-item.active-menu:hover {
-            background-color: #e0e0e0; /* Slightly darker on hover */
+            background-color: #E5E7EB; /* Sedikit lebih gelap dari background */
+        }
+        /* Hover effect for non-active sidebar links */
+        .w3-bar-item:not(.active-menu):hover {
+            background-color: #F3F4F6; /* Sedikit lebih gelap dari background */
+            color: #111827; /* Text Utama: Hitam kebiruan on hover */
         }
 
 
@@ -92,7 +119,7 @@
             margin: 0;
         }
         .skill-list li {
-            background-color: #f1f1f1;
+            background-color: #ffffff; /* Putih murni untuk item skill */
             padding: 10px 15px;
             margin-bottom: 8px;
             border-radius: 5px;
@@ -100,14 +127,172 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+        .skill-list li:hover {
+            background-color: #F3F4F6; /* Lighter background on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
         }
         .skill-list li i {
             margin-right: 10px;
-            color: #009688; /* Teal color for icons */
+            color: #3B82F6; /* Secondary: Biru terang for icons */
         }
         .skill-list li span {
             font-weight: 500;
-            color: #333;
+            color: #111827; /* Text Utama: Hitam kebiruan */
+        }
+
+        /* Project Card Hover Effects */
+        .w3-row-padding > div.w3-container.w3-margin-bottom,
+        .w3-row-padding > div.w3-container {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            background-color: #ffffff; /* Putih murni untuk kartu */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .w3-row-padding > div.w3-container.w3-margin-bottom:hover,
+        .w3-row-padding > div.w3-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .w3-row-padding img {
+            border-radius: 8px 8px 0 0;
+        }
+        .w3-row-padding .w3-container.w3-white p {
+            color: #111827; /* Text Utama for project card text */
+        }
+        .w3-row-padding .w3-container.w3-white p b {
+            color: #111827; /* Text Utama for bold text */
+        }
+
+
+        /* Contact Form Button Hover Effect */
+        .w3-button.w3-black {
+            background-color: #3B82F6 !important; /* Secondary: Biru terang untuk tombol */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            color: #ffffff !important; /* Putih murni */
+            border-radius: 5px;
+        }
+        .w3-button.w3-black:hover {
+            background-color: #1E3A8A !important; /* Primary (Dark) on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .w3-button.w3-black:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Sidebar specific styling */
+        .w3-sidebar {
+            background-color: #ffffff !important; /* Putih murni sidebar */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        }
+        .w3-sidebar h4 {
+            color: #111827; /* Text Utama */
+        }
+        .w3-sidebar .w3-panel.w3-large {
+            border-top: 1px solid #E2E8F0; /* Sedikit lebih gelap dari background untuk pemisah */
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        .w3-sidebar .w3-panel.w3-large a {
+            color: #6B7280; /* Text Sekunder */
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        .w3-sidebar .w3-panel.w3-large a:hover {
+            color: #3B82F6; /* Secondary: Biru terang on hover */
+            transform: scale(1.2);
+        }
+
+        /* Header specific styling */
+        header#portfolio {
+            background-color: #ffffff; /* Putih murni header */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 20px 16px;
+        }
+        header#portfolio h1 {
+            color: #1E3A8A; /* Primary (Dark): Biru navy */
+        }
+        header#portfolio .w3-button {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header#portfolio .w3-button:hover {
+            background-color: #F3F4F6; /* Sedikit lebih gelap dari background */
+            color: #111827; /* Text Utama */
+        }
+
+        /* Contact section background and text */
+        .w3-container.w3-padding-large.w3-grey {
+            background-color: #E2E8F0 !important; /* Sedikit lebih gelap dari background */
+            color: #111827; /* Text Utama */
+        }
+        .w3-container.w3-padding-large.w3-grey h4 {
+            color: #1E3A8A; /* Primary (Dark): Biru navy */
+        }
+        .w3-container.w3-padding-large.w3-grey p {
+            color: #6B7280; /* Text Sekunder */
+        }
+        .w3-container.w3-padding-large.w3-grey .w3-third p i {
+            color: #1E3A8A !important; /* Primary (Dark) for icons */
+        }
+        /* Specific fix for text and icons inside contact boxes */
+        .w3-container.w3-padding-large.w3-grey .w3-third.w3-dark-grey p,
+        .w3-container.w3-padding-large.w3-grey .w3-third.w3-dark-grey p i {
+            color: #F9FAFB !important; /* Putih abu lembut untuk teks dan ikon di kotak dark-grey */
+        }
+        .w3-container.w3-padding-large.w3-grey .w3-third.w3-teal p,
+        .w3-container.w3-padding-large.w3-grey .w3-third.w3-teal p i {
+            color: #ffffff !important; /* Putih murni untuk teks dan ikon di kotak teal */
+        }
+
+        .w3-container.w3-padding-large.w3-grey .w3-third.w3-dark-grey {
+            background-color: #4B5563 !important; /* Abu-abu gelap */
+        }
+        .w3-container.w3-padding-large.w3-grey .w3-third.w3-teal {
+            background-color: #3B82F6 !important; /* Secondary: Biru terang */
+        }
+        .w3-container.w3-padding-large.w3-grey input.w3-input {
+            background-color: #ffffff; /* Putih murni */
+            color: #111827; /* Text Utama */
+            border-color: #D1D5DB; /* Abu-abu terang */
+        }
+        .w3-container.w3-padding-large.w3-grey input.w3-input:focus {
+            border-color: #3B82F6; /* Secondary: Biru terang */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); /* Efek fokus biru terang */
+        }
+
+        /* Specific text color for About Me and Technical Skills description */
+        #about p {
+            color: #111827; /* Text Utama */
+        }
+        #about h4 {
+            color: #111827; /* Text Utama */
+        }
+        .w3-container.w3-padding-large.w3-grey label { /* Labels in contact form */
+            color: #111827; /* Text Utama */
+        }
+
+        /* Form Submission Message Styling */
+        .form-message {
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none; /* Hidden by default */
+            text-align: center;
+        }
+        .form-message.success {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        .form-message.error {
+            background-color: #F44336; /* Red */
+            color: white;
         }
     </style>
 </head>
@@ -219,20 +404,22 @@
       </div>
     </div>
     <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
+    <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST"> <div class="w3-section">
+        <label for="name">Name</label>
+        <input class="w3-input w3-border" type="text" name="name" id="name" required>
       </div>
       <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
+        <label for="email">Email</label>
+        <input class="w3-input w3-border" type="email" name="email" id="email" required>
       </div>
       <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
+        <label for="message">Message</label>
+        <textarea class="w3-input w3-border" name="message" id="message" rows="5" required></textarea>
       </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom" id="submitButton">
+        <i class="fa fa-paper-plane w3-margin-right"></i>Send Message
+      </button>
+      <div id="formMessage" class="form-message"></div>
     </form>
   </div>
 
@@ -247,6 +434,7 @@
             <a href="https://github.com/RioFelix" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
         </div>
 
+       
     </div>
   </footer>
 
@@ -270,43 +458,33 @@ document.getElementById('current-year-footer').textContent = new Date().getFullY
 
 // --- JavaScript for Active Menu Highlight ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all main content sections that correspond to navigation links
-    // Ensure these IDs match the hrefs in your sidebar links
     const sections = document.querySelectorAll('div.w3-main > header#portfolio, div.w3-main > div[id="about"], div.w3-main > div[id="contact"]');
-    // Select all sidebar navigation links
     const navLinks = document.querySelectorAll('#mySidebar .sidebar-nav-link');
 
-    // Function to remove active class from all nav links
     function removeActiveClass() {
         navLinks.forEach(link => {
             link.classList.remove('active-menu');
         });
     }
 
-    // Function to highlight the active menu item based on scroll position
     function highlightActiveMenuItem() {
         let currentActiveSectionId = '';
-        const offset = 150; // Adjust this offset as needed for better highlight timing
+        const offset = 150; 
 
-        // Iterate through sections to find which one is currently in view
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
             const sectionHeight = section.clientHeight;
 
-            // If the section is within the viewport (considering the offset)
             if (sectionTop <= offset && sectionTop + sectionHeight > offset) {
                 currentActiveSectionId = section.id;
             }
         });
 
-        // Handle cases where no specific section is highlighted (e.g., at the very top)
-        // Default to 'portfolio' if at the top of the page
         if (!currentActiveSectionId && window.scrollY < sections[0].offsetTop + 100) {
              currentActiveSectionId = 'portfolio';
         }
 
-        // Apply active class to the corresponding navigation link
-        removeActiveClass(); // First, remove all active classes
+        removeActiveClass(); 
         navLinks.forEach(link => {
             if (link.dataset.section === currentActiveSectionId) {
                 link.classList.add('active-menu');
@@ -314,34 +492,78 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Add click event listeners to sidebar navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault(); // Prevent default anchor link behavior
+            event.preventDefault(); 
 
             const targetSectionId = event.currentTarget.dataset.section;
             const targetSection = document.getElementById(targetSectionId);
 
             if (targetSection) {
-                // Smooth scroll to the target section
                 window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Adjust for fixed header/offset if any
+                    top: targetSection.offsetTop - 70, 
                     behavior: 'smooth'
                 });
 
-                // Immediately update active class on click
                 removeActiveClass();
                 event.currentTarget.classList.add('active-menu');
             }
-            w3_close(); // Close sidebar after clicking a link
+            w3_close(); 
         });
     });
 
-    // Attach the highlight function to scroll event
     window.addEventListener('scroll', highlightActiveMenuItem);
-
-    // Call it once on load to set the initial active state
     highlightActiveMenuItem();
+
+    // --- JavaScript for Form Submission ---
+    const contactForm = document.getElementById('contactForm');
+    const submitButton = document.getElementById('submitButton');
+    const formMessage = document.getElementById('formMessage');
+
+    if (contactForm) { // Ensure the form element exists
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Mencegah pengiriman formulir default
+
+            submitButton.disabled = true; // Nonaktifkan tombol
+            formMessage.style.display = 'none'; // Sembunyikan pesan sebelumnya
+            formMessage.classList.remove('success', 'error'); // Hapus kelas pesan sebelumnya
+
+            const formData = new FormData(contactForm); // Ambil data formulir
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json' // Memberi tahu Formspree bahwa kita mengharapkan JSON
+                    }
+                });
+
+                if (response.ok) { // Jika respons sukses (status 2xx)
+                    formMessage.textContent = 'Pesan Anda berhasil terkirim! Terima kasih.';
+                    formMessage.classList.add('success');
+                    contactForm.reset(); // Kosongkan formulir
+                } else {
+                    // Tangani error dari Formspree (misalnya validasi gagal)
+                    const data = await response.json();
+                    if (data.errors) {
+                        formMessage.textContent = 'Terjadi kesalahan: ' + data.errors.map(e => e.message).join(', ');
+                    } else {
+                        formMessage.textContent = 'Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.';
+                    }
+                    formMessage.classList.add('error');
+                }
+            } catch (error) {
+                // Tangani error jaringan
+                console.error('Error submitting form:', error);
+                formMessage.textContent = 'Terjadi masalah jaringan. Silakan periksa koneksi Anda dan coba lagi.';
+                formMessage.classList.add('error');
+            } finally {
+                submitButton.disabled = false; // Aktifkan kembali tombol
+                formMessage.style.display = 'block'; // Tampilkan pesan
+            }
+        });
+    }
 });
 </script>
 
